@@ -29,7 +29,8 @@ func main() {
 	rand.Seed(time.Now().UnixNano())
 
 	// get a ramdon number(int), range 100 (0 to 99)
-	rNum := rand.Intn(100)
+	nRange := 100
+	rNum := rand.Intn(nRange)
 	cnt := 1
 
 	for {
@@ -39,8 +40,8 @@ func main() {
 		if err != nil {
 			fmt.Println("Please guess the interger number.")
 		} else {
-			if num > 99 || num < 0 {
-				fmt.Println("Please guess the number between 0 and 99, inclusive.")
+			if num >= nRange || num < 0 {
+				fmt.Printf("Please guess the number between 0 and %d, inclusive.\n", nRange-1)
 			} else if rNum > num {
 				fmt.Println("The number is greater than your guess.")
 			} else if rNum < num {
