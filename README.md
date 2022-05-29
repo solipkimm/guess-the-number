@@ -10,5 +10,9 @@ go build
 
 ## Start
 ```bash
-./guess-the-number
+# Mac OS, Linux
+./guess-the-numbe
+
+# Window
+.\guess-the-number.exe
 ```
